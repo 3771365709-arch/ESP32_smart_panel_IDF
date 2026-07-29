@@ -1,0 +1,29 @@
+idf_component_register(
+    SRCS
+        "app_main.c"
+        "wifi_connect.c"
+        "mqtt_client.c"
+        "ota_update.c"
+        "hardware/relay.c"
+        "hardware/pwm_led.c"
+        "hardware/sensor.c"
+        "ui/ui_manager.c"
+        "ui/scr_main.c"
+        "ui/scr_setting.c"
+        "ui/scr_about.c"
+    INCLUDE_DIRS
+        "."
+        "hardware"
+        "ui"
+    REQUIRES
+        esp_wifi
+        esp_netif
+        esp_event
+        mqtt
+        esp_http_client
+        app_update
+        nvs_flash
+        driver
+        lvgl
+        lvgl_esp32_drivers
+)
